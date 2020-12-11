@@ -1,0 +1,110 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body{
+    background-size: 220%;
+}
+
+
+li{
+  float: left;
+  list-style: none;
+  margin-top: 1vw;
+  margin-right: -3.4vw;
+}
+
+nav{
+
+  float: right;
+  margin-top: -6.5vw;
+  margin-right: 35vw;
+}
+
+@font-face{
+  font-family: 'rock';
+  src: url(../Fuentes/QueenInlineGrunge.ttf);
+}
+
+a.menu{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  margin-right: 4vw;
+  background: white;
+}
+
+#btn{
+  margin-left: 92.3vw;
+}
+
+#fbtn{
+  height: 3vw;
+}
+
+#reproductor{
+  margin-left: 79vw;
+}
+
+#videos{
+  width: 50vw; 
+  height: 50vw;
+  margin-top: -3vw;
+  margin-left: 22.5vw;
+}
+
+.imag{
+  width:19.5vw; 
+  height:16.5vw;
+  margin-left: 3vw;
+}
+
+
+#lugar1{
+  margin-left: 12.6vw;
+  margin-top: -15.7vw;
+}
+
+
+#play{
+  width: 4.2vw;
+  height: 4.2vw;
+}
+
+#lugar2{
+  margin-left: 17.3vw;
+  margin-top: -4.38vw;
+}
+
+#mute{
+  width: 4.2vw;
+  height: 4.2vw;
+}
+
+#lugar3{
+  margin-left: 12.6vw;
+  margin-top: 0.4vw;
+}
+
+
+#retro{
+  width: 4.2vw;
+  height: 4.2vw;
+}
+
+#lugar4{
+  margin-left: 17.3vw;
+  margin-top: -4.25vw;
+}
+
+#adel{
+  width: 4.2vw;
+  height: 4.2vw;
+}
+
+.youtube {
+ margin-left: 80vw;
+}

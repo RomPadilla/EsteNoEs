@@ -1,0 +1,163 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+body{
+     background: url(../img/fondo.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+li{
+  float: left;
+  list-style: none;
+  margin-top: 1vw;
+  margin-right: -3vw;
+  background: white;
+}
+
+nav{
+
+  float: right;
+  margin-top: -6vw;
+  margin-right: 30vw;
+}
+
+#titulo{
+  text-decoration: none;
+  background: white;
+}
+
+@font-face{
+  font-family: 'rock';
+  src: url(../Fuentes/QueenInlineGrunge.ttf);
+}
+
+a.menu{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  margin-right: 5vw
+}
+
+h1{
+	font-family: 'rock';
+}
+
+.carousel, .carousel-inner{
+  width: 20vw;
+}
+
+.carousel-inner img {
+    width: 20vw;
+    height: 20vw;
+}
+
+.carousel-control-prev{
+	width: 4vw;
+}
+
+.carousel-control-next{
+	width: 4vw;
+}
+
+
+.carousel-control-prev-icon{
+	background: url(../img/boton2.png);
+    width: 4vw;
+    height: 4vw;	
+}
+
+.carousel-control-next-icon{
+	background: url(../img/boton1.png);
+    width: 4vw;
+    height: 4vw;
+}
+
+#contenedor1{
+	width: 0vw;
+	height: 0vw;
+	margin-left: 12.5vw;
+	margin-top: 10vw;
+}
+
+#contenedor2{
+	width: 0vw;
+	height: 0vw;
+	margin-left: 40vw;
+}
+
+#contenedor3{
+	width: 0vw;
+	height: 0vw;
+	margin-left: 66vw;
+}
+
+#contenedor4{
+	width: 0vw;
+	height: 0vw;
+	margin-left: 13.5vw;
+	margin-top: 25vw;
+}
+
+#contenedor5{
+	width: 0vw;
+	height: 0vw;
+	margin-left: 40vw;
+}
+
+#contenedor6{
+	width: 0vw;
+	height: 0vw;
+	margin-left: 66vw;
+}
+
+#contenedor7{
+	width: 0vw;
+	height: 0vw;
+	margin-left: 13.5vw;
+	margin-top: 25vw;
+}
+
+#contenedor8{
+	width: 0vw;
+	height: 0vw;
+	margin-left: 40vw;
+}
+
+#contenedor9{
+	width: 0vw;
+	height: 0vw;
+	margin-left: 66vw;
+}
+
+
+#contenedor10{
+	width: 0vw;
+	height: 0vw;
+	margin-left: 13.5vw;
+	margin-top: 25vw;
+}
+
+#contenedor11{
+	width: 0vw;
+	height: 0vw;
+	margin-left: 40vw;
+}
+
+#contenedor12{
+	width: 0vw;
+	height: 0vw;
+	margin-left: 66vw;
+}
+
+a.nombre{
+      text-decoration: none;
+      color: black;
+      background: white;
+      font-size: 1.3vw;
+}

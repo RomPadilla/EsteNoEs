@@ -1,0 +1,139 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body{
+     background: url(../img/fondo.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+li{
+  float: left;
+  list-style: none;
+  margin-top: 1vw;
+  margin-right: -3vw;
+  background: white;
+}
+
+nav{
+
+  float: right;
+  margin-top: 10vw;
+  margin-right: 3vw;
+}
+
+@font-face{
+  font-family: 'rock';
+  src: url(../Fuentes/QueenInlineGrunge.ttf);
+}
+
+a.menu{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  margin-right: 4vw
+}
+
+img.personaje{
+  position:absolute;
+  top:17.5vw;
+  left:52.5vw;
+  width:20vw;
+  height:26.5vw;
+  z-index:1;
+}
+
+img.libro{
+  position:absolute;
+  top:13.2vw;
+  left:11vw;
+  width:75vw;
+  height:39vw;
+  z-index:0;
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+ 
+.texto{
+    position: absolute;
+    top: 17.5vw;
+    left: 22vw;
+    background: none;
+    border-style: hidden;
+    text-align: left;
+}
+
+textarea.texto {
+  resize: none;
+  height: 25vw;
+}
+
+.texto2{
+    position: absolute;
+    top: 54vw;
+    left: 8vw;
+    background: #eec887;
+    border-style: hidden;
+    text-align: left;
+}
+
+textarea.texto2{
+  resize: none;
+  height: 45vw;
+  width: 82vw;
+}
+
+.imag{
+  width:19.5vw; 
+  height:16.5vw;
+  margin-left: 3vw;
+  border: white 1.5vw solid;
+}
+
+#tres{
+  margin-top: 100vw;
+  margin-left: 14vw;
+}
+
+#dos{
+  margin-top: 5vw;
+  margin-left: 24.3vw;
+}
+
+#nombre{
+  margin-top: -23.2vw;
+  margin-left: 24.4vw;
+}
+
+#nombre2{
+  margin-top: -1.5vw;
+  margin-left: 47.4vw;
+}
+
+#nombre3{
+  margin-top: -1.5vw;
+  margin-left: 70.2vw;
+}
+
+#nombre4{
+  margin-top: 19.8vw;
+  margin-left: 36.6vw;
+}
+
+#nombre5{
+  margin-top: -1.5vw;
+  margin-left: 58.2vw;
+}
+
+.icono{
+  width:5vw; 
+  height:5vw;
+}

@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body{
+    
+    background-color: orange;
+}
+
+
+@font-face{
+  font-family: 'fuente';
+  src: url(../Fuentes/minster1.ttf);
+}
+
+#id_email{
+  text-decoration: none;
+  font-family: 'fuente';
+  font-size: 3vw;
+  margin-right: 4vw;
+  color: gold;
+  background-color: purple;
+}
+
+#reset{
+  text-decoration: none;
+  font-family: 'fuente';
+  font-size: 3vw;
+  margin-right: 4vw;
+  color: gold;
+  background-color: purple;
+}
+
+#volver{
+  text-decoration: none;
+  font-family: 'fuente';
+  font-size: 3vw;
+  margin-right: 4vw;
+  color: gold;
+  background-color: purple;
+}

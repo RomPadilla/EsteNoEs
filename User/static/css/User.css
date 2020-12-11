@@ -1,0 +1,384 @@
+body {
+  margin: 0;
+  background: url(../img/FondoU.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+.container {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin-right: 0vw;
+}
+
+.Reproductor {
+  width: 250px;
+  height: 400px;
+  margin-right: -80.5vw;
+  margin-top: -63.2vw;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 1.8vw;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.Reproductor__controles1 {
+  display: flex;
+  width: 95%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-top: 0.1vw;
+}
+
+.Reproductor__controles2 {
+  display: flex;
+  width: 95%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-top: -1vw;
+}
+
+.tiempo {
+  text-align: center;
+  margin: 15px 0;
+  color:white;
+  margin-top: 0vw;
+}
+
+.barra_larga {
+  width: 80%;
+  height: 5px;
+  background: white;
+  border-radius: 50px;
+}
+.barra_larga .barra{
+  width: 0;
+  height: 5px;
+  background: gold;
+  border-radius: 50px;
+}
+
+i.fa.fa-fast-backward::before{
+  color:white;
+}
+i.fa.fa-play::before{
+  color:white;
+}
+
+i.fa.fa-pause::before{
+  color:white;
+}
+
+i.fa.fa-fast-forward::before{
+  color:white;
+}
+i.fa.fa-minus::before{
+  color:white;
+}
+
+i.fa.fa-volume-up::before{
+  color:white;
+}
+
+i.fa.fa-volume-mute::before{
+  color:white;
+}
+
+i.fa.fa-plus::before{
+  color:white;
+}
+
+.Reproductor__btn {
+  cursor: pointer;
+  border-radius: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 6px 20px 0px #fff9, 3px 4px 6px 0px #fff9,
+    8px 8px 20px #0001, 5px 5px 6px 0px #0001;
+}
+
+.Reproductor__btn:active {
+  box-shadow: inset -8px -8px 20px #fff9, inset -5px -5px 6px #fff9,
+    inset 8px 8px 20px #0003, inset 5px 5px 6px #0001;
+}
+
+.Reproductor__btn--pequeño {
+  min-width: 30px;
+  min-height: 30px;
+}
+
+.Reproductor__img {
+  width: 150px;
+  height: 110px;
+  border-radius: 15%;
+  box-shadow: 2px 2px 7px rgb(163, 177, 198), -2px -2px 7px rgb(163, 177, 198),
+    -8px -8px 50px rgba(255, 255, 255, 0.8), 3px 3px 25px rgba(0, 0, 0, 0.6);
+}
+
+
+h2{
+  font-size: 1.2em;
+  font-weight: 500;
+  color: black;
+  opacity: 0.5;
+  margin: 20px 0px 0px 0px;
+  margin-top: 1vw;
+}
+
+h3{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  color: black;
+  font-size: 1em;
+  opacity: 0.5;
+  margin: 0;
+  margin-top: 1vw;
+}
+
+.Reproductor__btn--mediano {
+  min-height: 40px;
+  min-width: 40px;
+}
+
+.orange {
+  background-color: #FF8633;
+}
+
+.pink {
+  background-color: #FF338F;
+}
+
+.hide {
+  display: none;
+}
+
+/*------------------------------------------------Estilo de la Barra de Navegación/Menu----------------------------------------------------------*/
+
+.BarraMenu{
+  /* recordatorio personal, no borrar descuadra lo demas */
+  overflow: hidden;
+  display: inline-block;
+}
+
+.BarraMenu li{
+  
+  background-color: #f0f0f0;
+  background-image: -webkit-gradient(linear,left top, left bottom,from(#fefefe), color-stop(0.5,#f0f0f0), color-stop(0.51, #e6e6e6));
+  background-image: -moz-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+  background-image: -o-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+  background-image: -ms-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+  background-image: linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+  border-right: 1px solid rgba(9, 9, 9, 0.125);
+  box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+  -moz-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+  -webkit-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+  position:relative;
+  float: left;
+  list-style: none;
+}
+
+.BarraMenu li:after{
+
+  /* Esto crea un pseudo elemento dentro de cada LI */ 
+  
+  content:'.';
+  text-indent:-9999px;
+  overflow:hidden;
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:1;
+  opacity:0;  
+  background-image:-webkit-gradient(linear, left top, right top, from(rgba(168,168,168,0.5)),color-stop(0.5,rgba(168,168,168,0)), to(rgba(168,168,168,0.5)));
+  background-image:-moz-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+  background-image:-o-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+  background-image:-ms-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+  background-image:linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+  box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+  -moz-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+  -webkit-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+  -moz-transition:0.25s all;
+  -webkit-transition:0.25s all;
+  -o-transition:0.25s all;
+  transition:0.25s all;
+}
+
+.BarraMenu li:last-child{    /* esta es parte de la transicion */
+  border-radius: 0 4px 4px 0;
+}
+
+.BarraMenu li:hover:after,  /* y esta tmb es parte de la transicion */
+.BarraMenu li.selected:after,
+.BarraMenu li:target:after{
+  opacity:1;
+}
+
+
+/* Styling the anchor elements  no borrar*/
+
+.BarraMenu li a{
+  color: #5d5d5d;
+  display: inline-block;
+  font: 20px/1 Lobster,Arial,sans-serif;
+  padding: 12px 35px 14px;
+  position: relative;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+  z-index:2;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+header{
+  display:block;
+  margin-top:-18vw;
+  position:relative;
+}
+
+nav{
+  display: block;
+  margin: 300px auto 0;
+  text-align: center;
+  width: 600px;
+  margin-right: 100vw;
+}
+
+#con{
+  margin-top: -3vw;
+  margin-left: 27.30vw;
+}
+
+#out{
+  margin-top: -3vw;
+  margin-left: 38.30vw;
+}
+
+#us{
+  margin-top: -3vw;
+  margin-left: 48.30vw;
+}
+
+/*------------------------------------Estilo 2 Barra------------------------------------------------*/
+#navigationMenu li{
+  list-style:none;
+  height:39px;
+  padding:2px;
+  width:40px;
+}
+
+#navigationMenu span{
+  width:0;
+  left:38px;
+  padding:0;
+  position:absolute;
+  overflow:hidden;
+  font-size:18px;
+  font-weight:bold;
+  letter-spacing:0.6px;
+  white-space:nowrap;
+  line-height:39px;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#navigationMenu a{
+  background:url('../img/nuevo.jpg') no-repeat;
+  height:39px;
+  width:38px;
+  display:block;
+  position:relative;
+}
+
+#navigationMenu a:hover span{ width:auto; padding:0 20px;overflow:visible; }
+#navigationMenu a:hover{
+  text-decoration:none;
+  -moz-box-shadow:0 0 5px #9ddff5;
+  -webkit-box-shadow:0 0 5px #9ddff5;
+  box-shadow:0 0 5px #9ddff5;
+}
+
+/* Azul Button */
+
+#navigationMenu .Info { background-position:-38px 0;}
+#navigationMenu .Info:hover { background-position:-38px -39px;}
+#navigationMenu .Info span{
+  background-color:#1e8bb4;
+  color:#223a44;
+  text-shadow:1px 1px 0 #44a8d0;
+}
+
+#CuentaU{
+  display:none;
+}
+
+/* Plomo Button */
+
+#navigationMenu .Editar { background-position:-76px 0;}
+#navigationMenu .Editar:hover { background-position:-76px -39px;}
+#navigationMenu .Editar span{
+  background-color:#c86c1f;
+  color:#5a3517;
+  text-shadow:1px 1px 0 #d28344;
+}
+
+#Modificar{
+  display:none;
+}
+
+/* Rojo Button */
+
+#navigationMenu .Eliminar { background-position:-114px 0;}
+#navigationMenu .Eliminar:hover{ background-position:-114px -39px;}
+#navigationMenu .Eliminar span{
+  background-color:#d0a525;
+  color:#604e18;
+  text-shadow:1px 1px 0 #d8b54b;
+}
+
+/* Rosa Button */
+
+#navigationMenu .contactanos { background-position:-152px 0;}
+#navigationMenu .contactanos:hover { background-position:-152px -39px;}
+#navigationMenu .contactanos span{
+  background-color:#af1e83;
+  color:#460f35;
+  text-shadow:1px 1px 0 #d244a6;
+}
+
+/* The styles below are only needed for the demo page */
+
+#main{
+  
+
+  width:40px;
+}
+
+

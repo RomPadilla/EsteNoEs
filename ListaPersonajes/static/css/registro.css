@@ -1,0 +1,101 @@
+#pregunta1 {
+	float: left;
+	width: 25vw;
+	height: 30vh;
+}
+
+#respuesta1{
+	float: left;
+	width: 40vw;
+	height: 30vh;
+}
+
+#foto1{
+	float: left;
+	width: 30vw;
+	height: 30vh;
+}
+
+#pregunta2 {
+	float: left;
+	width: 25vw;
+	height: 15vh;
+}
+
+#respuesta2{
+	float: left;
+	width: 40vw;
+	height: 15vh;
+}
+
+#foto2{
+	float: left;
+	width: 30vw;
+	height: 15vh;
+}
+#pregunta3 {
+	float: left;
+	width: 25vw;
+	height: 20vh;
+}
+
+#respuesta3{
+	float: left;
+	width: 40vw;
+	height: 20vh;
+}
+
+#foto3{
+	float: left;
+	width: 30vw;
+	height: 20vh;
+}
+.ima{
+	max-width: 90%;
+	max-height:90%;
+	display: block;
+	margin: auto;
+}
+
+#botones{
+	width: 20vw;
+	height: 5vh;
+	margin: auto;
+}
+
+p{
+ font-size: 120%;
+}
+
+body{
+	background: orange;
+	background-size: 120%;
+}
+
+li{
+  float: left;
+  list-style: none;
+  margin-top: 1vw;
+  margin-right: -3.4vw;
+}
+
+nav{
+
+  float: right;
+  margin-top: -6.5vw;
+  margin-right: 28vw;
+}
+
+@font-face{
+  font-family: 'rock';
+  src: url(../Fuentes/QueenInlineGrunge.ttf);
+}
+
+a.menu{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 2.5vw;
+  margin-right: 4vw;
+  background: white;
+}

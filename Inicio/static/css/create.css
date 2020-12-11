@@ -1,0 +1,150 @@
+body{
+	background: url(../img/fondoN.jpg);
+	background-size: 98%;
+}
+
+.sidebar-nav{
+
+  list-style: none;
+  
+}
+
+@font-face{
+  font-family: 'rock';
+  src: url(../Fuentes/QueenInlineGrunge.ttf);
+}
+
+li{
+  float: left;
+  list-style: none;
+  margin-top: 1vw;
+  margin-right: -3.8vw;
+
+}
+
+a.ini{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  background: white;
+  margin-left: -0.2vw;
+}
+
+a.na{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  background: white;
+  margin-left: 3.5vw;
+}
+
+a.lis{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  background: white;
+  margin-left: 4vw;
+} 
+
+a.cre{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  background: white;
+  margin-left: 3vw;
+}
+
+a.us{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  background: white;
+  margin-left: 4.2vw;
+}
+
+.col-sm-2 {	
+	margin-left: 38vw;
+}
+span.helptext{
+    color: gold;
+    background-color: purple;
+    font-family: 'rock';
+    font-size: 1.4vw;
+}
+
+input#id_Nombre{
+	color: gold;
+	background-color: purple;
+}
+
+input#id_Apellido{
+	color: gold;
+	background-color: purple;
+}
+
+input#id_Correo{
+	color: gold;
+	background-color: purple;
+}
+
+input#id_Fecha{
+	color: gold;
+	background-color: purple;
+}
+
+input#id_Numero{
+	color: gold;
+	background-color: purple;
+}
+
+input#id_Username{
+	color: gold;
+	background-color: purple;
+}
+
+input#id_Password{
+	color: gold;
+	background-color: purple;
+}
+
+select#id_Personaje{
+	color: gold;
+	background-color: purple;
+}
+
+th {
+    text-align: left;
+    font-weight: 900;
+    color: gold;
+    font-size: 1.4vw;
+    background-color: purple;
+}
+
+
+.label, [data-tooltip]:after, button, .button, [type=submit], .dropimage {
+    text-align: center;
+    margin-top: 2vw;
+    margin-left: 6vw;
+    padding: .3em .9em;
+    font-size: 1.2vw;
+    font-weight: 900;
+    vertical-align: middle;
+    background: purple;
+    color: gold;
+    border: 0;
+    border-radius: .2em;
+    width: auto;
+}
+
+form {
+    display: block;
+    margin-top: 5vw;
+    margin-left: 0.2vw;
+}
+
+

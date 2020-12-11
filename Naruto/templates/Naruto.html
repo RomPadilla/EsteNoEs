@@ -1,0 +1,305 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+{% block title %}<title>Naruto Usumaki</title>{% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/personajes.css' %}">
+</head>
+
+<body>
+ {% block content %}  
+    <header>
+          <nav>     
+             <ul>
+                <li><a class="menu" href="{% url 'Inicio' %}">Inicio</a></li>
+                <li><a class="menu" href="{% url 'Naruto' %}">Personajes</a></li>
+                <li><a class="menu" href="{% url 'ListaPersonajes' %}">Galeria</a></li>
+                {% if user.is_authenticated %}
+                {% if perms.Naruto.delete_informaciones %}
+                <li><a class="menu" href="{% url 'admin:index' %}">Administrar</a></li>
+                {% endif %}                
+                <li><a class="menu" href="{% url 'User' %}">{{ user.username }}</a></li>
+                <li><a class="menu" href="{% url 'logout' %}">Cerrar Sesión</a></li>
+                {% else %}
+                <li><a class="menu" href="{% url 'register' %}">Registro</a></li>
+                <li><a class="menu" href="{% url 'login' %}">login</a></li>
+                {% endif %}
+               </ul>
+            </nav> 
+    </header>
+    <div class="contenedor">
+        <img class="libro" src="{% static 'img/libro.png' %}" alt=""> 
+          <FORM>
+            <TEXTAREA class="texto"
+               ROWS="10"
+               COLS="40" disabled>
+                  Nombre en:
+                  Kanji: うずまきナルト
+                  Rōmaji: Uzumaki Naruto
+                  Debuto/Apariciones:
+                  Manga Naruto:
+                  Capítulo #1
+                  Anime Naruto:
+                  Episodio #1
+                  Novela:
+                  ¡Gran escena de acción! 
+                  ¡¡Libro de artes ninja de la princesa de la nieve!!
+                  Película:
+                  Naruto la Película: ¡El Rescate de la Princesa de la Nieve!
+                  Juego:
+                  Naruto: Konoha Ninpōchō
+                  OVA:
+                  En Busca del Trébol Carmesí de 4 Hojas
+                  Doblajes:
+                  Japonés
+                  Junko Takeuchi
+                  Español (Latino)
+                  Isabel Martiñón
+                  Español (España)
+                  Javier Balas
+                  Información
+                  Nacimiento
+                  Libra 10 de octubre
+                  Género
+                  Masculino HD Masculino
+                  Edad
+                  Parte I: 12
+                  Parte II: 16-17
+                  Período de cambio: 19
+                  Parte III: 32
+                  Altura
+                  Parte I: 145,3 cm-147,5 cm
+                  Parte II: 1,66 m
+                  Período de cambios: 1,80 m
+                  Peso
+                  Parte I: 40,1 kg-40,6 kg
+                  Parte II: 50,9 kg
+                  Sangre
+                  B
+                  Bestia con Cola
+                  Shukaku, Matatabi, Isobu, Son Gokū, Kokuō, Saiken, Chōmei, Gyūki, Kurama
+                  Kekkei Genkai
+                  Elemento Lava Lava
+                  Elemento Imán Imán
+                  Elemento Ebullición Ebullición
+                  Habilidad única
+                  Detección de Sentimientos Negativos
+                  Habilidad para Flotar
+                  Habilidad de Regeneración
+                  Clasificación
+                  Jinchūriki
+                  Sabio
+                  Tipo Sensor
+                  Ocupación
+                  Profesor/Conferencista de la Academia
+                  Hokage
+                  Afiliación
+                  Símbolo de Konohagakure Konohagakure
+                  Símbolo de Monte Myōbokuzan Monte Myōboku
+                  Símbolo de Gran Alianza Shinobi Fuerzas Aliadas Shinobi
+                  Equipo
+                  Equipo Kakashi
+                  11 de Konoha
+                  Equipo de Recuperación de Sasuke
+                  Equipo Naruto (Sólo Anime)
+                  Equipo Uno (Sólo Anime)
+                  Escuadrón de Ocho Hombres
+                  Equipo Sakura (Sólo Anime)
+                  Equipo de Rescate de Hanabi
+                  Gokage
+                  Compañero
+                  Sasuke Uchiha
+                  Sakura Haruno
+                  Clan
+                  Símbolo de Clan Uzumaki Clan Uzumaki
+                  Rango Ninja
+                  Rango Ninja
+                  Parte I: Genin
+                  Parte II: Genin
+                  Período de cambios: Genin
+                  Parte III: Kage
+                  Registro Ninja:
+                  012607
+                  Graduación en la Academia:
+                  12
+            </TEXTAREA>
+        </FORM>
+    </div>
+        <img class="personaje" src="{% static 'img/imagen.jpg' %}" alt="">
+         <FORM>
+            <TEXTAREA class="texto2"
+               ROWS="10"
+               COLS="50" disabled>
+               Naruto Uzumaki (うずまきナルト, Uzumaki Naruto) es el protagonista de la serie del manga y anime Naruto y Naruto Shippūden. Asimismo es partícipe del manga y anime Boruto: Naruto Next Generations, secuela de la obra original de Masashi Kishimoto. Es residente de Konohagakure, hijo del Cuarto Hokage, Minato Namikaze y su esposa Kushina Uzumaki, además de ser la actual Reencarnación de Asura Ōtsutsuki. Desde el día de su nacimiento hasta que le fue extraído por Madara Uchiha fue el Jinchūriki de la mitad Yang de Kurama y el más reciente de la mitad Yin de Kurama. Finalmente recibiría la mitad extraída de Kurama, unificándose con su otra mitad en el interior de éste. También posee parte del Chakra de las otras Bestias con Cola, convirtiéndose en un Jinchūriki para cada uno de los Bijū y por éstas razones se lo ha nombrado como el Pilar Humano del Poder del Diez Colas.[14] Fue miembro del Equipo Kakashi junto a Sakura Haruno y Sasuke Uchiha. Actualmente es el Séptimo Hokage (七代目火影, Nanadaime Hokage; que significa "Séptima Sombra del Fuego") de Konoha, cumpliendo su sueño, así como también el esposo de Hinata Hyūga y padre de Boruto Uzumaki y Himawari Uzumaki.
+
+Contenido[mostrar]
+Apariencia
+Naruto, según lo establecido por Jiraiya, tiene un gran parecido con su padre, heredando sus ojos azules y su cabello rubio de punta, de igual forma, de su madre heredó la forma de sus ojos y su cara. Las características físicas más importantes y resaltantes de Naruto son las tres marcas de bigotes en ambas mejillas. Además, el rasgo más mencionado con regularidad antes de la Segunda Parte era su baja estatura para su edad. Después de dos años, Naruto tuvo una racha en su crecimiento, llegando a superar en tamaño a Sakura. Para el final de la Cuarta Guerra Mundial Shinobi, la estatura de Naruto había aumentado hasta casi alcanzar a su padre, y dos años después, fue el más alto de su generación. Durante el epílogo, la estatura de Naruto aumentó a tal punto de superar por una cabeza completa a su esposa Hinata, siendo uno de los más altos de su generación.
+
+Durante su infancia, Naruto utilizó una multitud de camisas que variaban sus colores, pasando por blanco, verde o negro, las cuales tenían un símbolo Uzumaki o de fuego en la parte delantera, además de que llevaba unas bermudas. También solía utilizar en su frente unos goggles de color verde que tenían escrito su nombre, sin embargo, con el tiempo, dejó de utilizarlos y lo reemplazó por su banda. Durante la Primera Parte, la vestimenta de Naruto consistió en un chándal color naranja con azul en la zona de los hombros y alrededor de la cintura, un remolino blanco con una borla en la parte izquierda y el símbolo del Clan Uzumaki en la espalda, tenía el cuello alto de color blanco, pantalones color naranja con una pequeña bolsa para guardar sus armas unido a su pierna derecha, las típicas sandalias shinobi de color azul y un protector de frente de color azul. Debajo de su chándal, Naruto utiliza generalmente una camiseta negra, sin embargo, en algunas ocasiones, llevaba una armadura bajo ésta.
+
+Durante la Segunda Parte, la vestimenta de Naruto sufrió modificaciones, debido a que su ropa original fue destrozada durante el entrenamiento con Jiraiya. La vestimenta conserva el color naranja, así como el blanco a excepción de que ya no tenía la borla, además de remolinos de color rojo, sin embargo, el chándal es mucho más ajustada reemplazando el color azul por negro, este se extiende por el cuello, los hombros y en las mangas. La parte metálica de su Banda ninja había sido movida a una larga bandana negra, también cambió sus sandalias shinobi azules por unas negras. En algunas ocasiones, Naruto era visto utilizando una camiseta color verde militar con el símbolo de fuego y pantalones blancos, esto en los días casuales o en los que no haya ninguna misión.
+
+En su batalla contra Pain, Naruto utilizó brevemente una capa roja corta con el diseño de llamas negras en los bordes y llevaba el Pergamino de Invocación de Clones de Sombra colgando en su espalda, sin embargo, la capa fue destruida cuando entró en su Versión Dos. Debido a que se encontró con Hagoromo, Naruto obtuvo la marca de un sol blanco en su palma derecha, la cual desapareció cuando sellaron a Kaguya. Posteriormente, tras su batalla final con Sasuke, producto del choque del Rasengan con el Chidori, Naruto perdió su brazo derecho, pero algún tiempo después de finalizada la guerra, Tsunade le construyó una prótesis para su brazo hecha de las células de Hashirama y la cual esta completamente envuelta en vendas; este brazo es un brazo exactamente igual al suyo real, pero se deja las vendas por considerarlo el símbolo de su vinculo con Sasuke.[15]
+
+Dos años después de la Cuarta Guerra Mundial Shinobi, Naruto ha crecido notablemente en altura y sus facciones faciales se han desarrollado. Posee cabello muy corto y trasladó la parte metálica de su Banda ninja a una simple banda negra. Lleva una chaqueta negra tipo uniforme con la cremallera color naranja y la cual cuenta con varios botones en la cintura y las mangas, lo que le permite plegar la manga izquierda y los faldones traseros, dándole un fácil acceso a las bolsas de armas en la parte posterior de su cinturón. Además lleva una banda roja con el símbolo Uzumaki en su brazo izquierdo. Al estar en sus días de descanso, Naruto lleva una sudadera naranja y un pantalón negro con sandalias.
+
+Inicialmente llevaba una bufanda a rayas de color azul que había sido tejida por su madre, sin embargo, la dejó de utilizar cuando supo que Hinata tejía una bufanda roja para él. Cuando él y Hinata se casaron, Naruto utilizaba un kimono negro tradicional de las bodas. Varios años después, ya como el Séptimo Hokage, Naruto deja de utilizar su Banda ninja. Su vestimenta consta de una sudadera de color naranja con rayas negras, junto con pantalones negros y las sandalias shinobi. Junto con el sombrero típico del Hokage, Naruto también empieza a utilizar una capa blanca decorada con llamas en los bordes y que tiene inscrita verticalmente las palabras "Séptimo Hokage" (七代目火影, Nanadaime Hokage) y se cierra en la parte frontal por una cuerda delgada de color rojo.
+
+Naruto de bebé
+Naruto de bebé.
+Naruto en su infancia
+Naruto en su infancia.
+Naruto aparece para luchar contra Pain
+Naruto durante la Invasión de Pain.
+Naruto como Hokage
+Naruto como Hokage.
+Naruto imaginándose a sí mismo como pelirrojo
+Naruto imaginándose a sí mismo como pelirrojo.
+Personalidad
+Naruto siendo despreciado en su niñez debido al Nueve Colas
+Naruto siendo despreciado en su niñez debido al Nueve Colas.
+
+Debido a los prejuicios y la soledad que sufrió en su infancia, Naruto desarrolló un ansia de reconocimiento y aceptación. Para lograr esto, Naruto solía hacer travesuras por toda la aldea y afirmaba que algún día obtendría el título de Hokage. Aunque después de haberse relacionado más con otras personas, sus razones para querer convertirse en Hokage sufrieron un cambio: tienen menos que ver con el deseo de reconocimiento, y más con querer proteger su hogar y las personas cercanas a él. A pesar la frialdad con la que fue tratado en su niñez, el creció y se convirtió en un gran ninja, tal y como sus padres anhelaban. Muchos personajes e incluso personas distintivas y respetadas, admiran y alientan su sueño de ser Hokage. Según lo declarado por Tobi y por muchos otros, Naruto es un firme creyente de la Voluntad de Fuego.
+La exuberante personalidad de Naruto y su deseo ardiente de superación impactan fuertemente en la vida de quienes lo rodean. Al comienzo de la serie, Naruto se hizo amigo de Konohamaru Sarutobi, el nieto del Tercer Hokage, y es a través de su tutela breve que Konohamaru comprendió que el camino al éxito es a través del trabajo duro. Kakashi Hatake ha descrito esto como “el poder único de Naruto”, el como parece cambiar la visión del mundo de todas las personas que conoce. Con este poder, Naruto fue capaz de redimir a Zabuza Momochi y Neji Hyūga, e infundir valor a Inari, Sakura Haruno, Hinata Hyūga y Tsunade. También de cambiar a Gaara, de un despiadado asesino a uno de sus más cercanos amigos, e incluso de ganar la confianza de Nagato, el aparente líder de Akatsuki y quien fue uno de los principales antagonistas de la serie. Naruto cree que sólo él podía salvar a Sasuke Uchiha de la oscuridad, al final lográndolo.
+
+Como se mencionó anteriormente, Naruto se caracteriza por ser hiperactivo, suele ser exuberante, fácilmente excitable, impulsivo, y sufre de un lapso de atención corto. Está rodeado siempre de situaciones cómicas, y está empeñado en sacar una sonrisa (o a veces también de quicio) a quien esté en una situación crítica, haciendo bromas en los momentos menos indicados. A veces se le veía discutir y pelear con sus clones, algo tonto de por sí, ya que estaría discutiendo y golpeándose a sí mismo. Esto es apoyado por Asuma Sarutobi en la saga de los Doce Guardianes Ninja, ya que describe a Naruto como el tipo de persona que no piensa antes de actuar. Si bien el poder en bruto es uno de sus puntos fuertes, Naruto ha comenzado a aprender que la paciencia con enfoque es algo que necesita a fin de que llegue a ser verdaderamente eficaz.
+
+De acuerdo con Kakashi, Naruto es alguien que aprende a través de su cuerpo. Naruto es relativamente ingenuo, es lento para entender los principios de un jutsu y con frecuencia requiere un embrutecimiento hacia abajo de una analogía ya simplificada con el fin de entender lo que se le explicó. Esto supone que él es capaz de mantener su atención el tiempo suficiente, ya que normalmente busca cambiar el tema a raíz de su ignorancia, insistiendo en que ya ha captado el concepto que se le explicó. A pesar de que mantiene esa confianza en sí mismo proclamando a viva voz que va a dominar cualquier técnica que esté aprendiendo en una cierta fracción de tiempo, Naruto no dudará en pedir ayuda si lo necesita.
+
+Ramen Anime
+La pasión de Naruto, el ramen.
+
+Como una extensión de su ingenuidad y nobleza, Naruto tiene una serie de rasgos infantiles. Sus pijamas siempre incluyen una copa cómico negro con ojos y dientes, y él mantiene su dinero en un monedero de una rana que cariñosamente llama “Gama-chan”. También es muy impetuoso y rara vez presta atención a la formalidad o condición social. Él come casi exclusivamente ramen, y es un cliente habitual en el bar Ichiraku Ramen incluso su pasatiempo es comer distintos tipos de ramen y clasificarlos. Él sólo se ha negado ramen en una ocasión: cuando se vio afectado por el dolor sobre la muerte de Jiraiya. Él tiene una afinidad natural con los jutsus pervertidos, algo que tiende a ser reprendido por Sakura, así como Iruka, y que él sólo trajo a nuevos niveles después de la reunión con Jiraiya. Él también sonríe casi siempre, ya que durante su infancia, fue para ocultar la tristeza de su vida solitaria. Los que están más cercanos a él son capaces de reconocer cuando su sonrisa no es genuina. Naruto también heredó su eslogan “Dattebayo!” (だって ば よ!) de su madre, Kushina Uzumaki, a quien le dicen “(bis) ttebane” ("(だ) って ばね") cuando está excitado o frustrado.
+
+La Promesa de Naruto
+Naruto jurando su solemne promesa.
+
+Sin embargo, cuando la situación lo exija o cuando un ser querido está en problemas, Naruto de inmediato acude en su ayuda. Esto se observa más comúnmente en la serie a través de sus interacciones con sus compañeros de equipo, Sasuke Uchiha y Sakura Haruno. Con Sasuke, Naruto lo ve como un hermano, ya a lo largo de la parte II se esfuerza para traerlo de vuelta a Konohagakure, a pesar de su deserción a voluntad del pueblo. Con Sakura, Naruto estaba enamorado desde hace mucho tiempo de ella, y hará todo lo posible para hacerla feliz, aunque sea a costa de su propia felicidad. Sai ha indicado que esta dedicación ha progresado hasta el punto de amor. Sai también toma nota de que la cepa de hacer feliz a Sakura y traer a casa a Sasuke son la fuente del dolor interior de Naruto.
+
+Después de la pérdida de su mentor Jiraiya, hablando con su propio padre, y hablar con el asesino y antiguo alumno de Jiraiya, Nagato, Naruto llegó a comprender el lado negativo de la venganza, y quería salvar a Sasuke de ella aún más. Naruto también trató de detener al Raikage de exigir su venganza contra Sasuke, porque esto crearía un ciclo de odio. Al parecer, Naruto se estaba convirtiendo cada vez más desesperados en su búsqueda para salvar a Sasuke, como él estaba dispuesto a ponerse de rodillas ante el Raikage y pedir perdón por los crímenes de Sasuke e incluso tomar el abuso físico sobre la venta hacia fuera. Por otra parte, después de aprender de Madara Uchiha la razón del odio de Sasuke, Naruto decidió y proclamó a Sakura, quien estaba tratando de llegar a abandonar su búsqueda, que realmente entiende a Sasuke ahora y quería salvarlo no lo sólo por la promesa que hizo a Sakura, pero también de sí mismo. Sin embargo, después de darse cuenta de que el resto de sus compañeros con el objetivo de matar a Sasuke, y que nadie en el pueblo jamás lo aceptaría de nuevo, Naruto al parecer sufría de hiperventilación debido al conflicto extremo que ha sido presentado.
+
+Al fin el rencuentro con Sasuke, Naruto simpatizaba con el criminal en sus actos, y se negó a dar marcha atrás o matarlo, en vez de eso encontró una tercera solución. Naruto llegó a la conclusión de que los dos estaban destinados en realidad a luchar, como Madara había predicho, y que cuando esto suceda, tanto Naruto y Sasuke iban a morir. Naruto está plenamente dispuesto a asumir la carga de Sasuke, como un amigo. En cierto modo, Naruto es el único que no ha perdido la esperanza en Sasuke. Sin embargo, Naruto no se rinde en traer de vuelta a Sasuke como un ciudadano del pueblo, pero creyendo que las palabras ya no tendrían ningún efecto a permitirles entenderse así que le toca pelear.
+
+Los Soles de Naruto, Kushina Uzumaki y Minato Namikaze
+Los Soles de Naruto: Kushina Uzumaki y Minato Namikaze.
+
+Naruto ha demostrado que ama profundamente a sus padres. Cuando conoció a su padre, a pesar de estar enojado con Minato por sellar al Nueve Colas dentro de él, Naruto pronto superó su enojo y estaba muy contento y orgulloso de ser el hijo del Cuarto Hokage. También entre lágrimas, abrazó a su madre Kushina cuando la conoció. Después de aprender cómo se conocieron sus padres y lo que ocurrió durante el Ataque del Nueve Colas a Konohagakure, Naruto le dijo a su madre que por fin podía entender cómo era el amor de un padre y también decía que no culpaba a Minato por lo que hizo, en realidad se sentía contento de ser su hijo. Cuando el Cuarto Raikage estaba criticando a Minato ya que era el supuesto “El Chico de la Profecía” el cual murió a manos del Nueve Colas, Naruto luego de recordar lo que le había dicho Kushina sobre lo que hizo su padre él le dijo al Raikage que el Cuarto Hokage no había fallado del todo. Según Killer B, la verdadera fuerza de Naruto y la de él sale de un lugar especial que son representado como soles (son las cosas que no queremos perder y que se aferran a ellas), pero en el caso de Naruto son dos soles los cuales son sus padres, a pesar de que ellos murieron después de que él nació, Naruto dijo que antes de que ellos murieran le dejaron muchas cosas entre ellas el labor de ser el Salvador.
+
+El drástico cambio en la relación entre Naruto y Kurama
+El drástico cambio en la relación entre Naruto y Kurama.
+
+A diferencia de la mayoría de los demás, Naruto ha mostrado un gran cuidado en lo que respecta a las Bestia con Cola y los suyos en su cuidado. Después de haber visto la relación dinámica entre el Bee y el Ocho Colas, le ha confesado a Son Gokū que incluso está celoso de éstos y que desearía tener una relación igual con Kurama. Sus palabras, que a veces, sorprendió a las bestias de cola que están acostumbrados a ser maltratados y encerrados, sin importar las intenciones de las personas. Recientemente, la relación entre Naruto y el Nueve Colas ha cambiado, mientras que la bestia parece haberse abierto más a Naruto, sin dejar de ser insiste en que él es el menor de dos malos, y Naruto ha declarado que reconoce a la bestia no como un monstruo sino como un compañero. Y es tanto su compromiso de ayudar a las bestias que incluso todas las bestias de cola y sus jinchūrikis confiaron sus sueños y esperanzas en él, llegando a la conclusión de que es el camino correcto de quien hablaba el Sabio de los Seis Caminos.
+
+Desde el comienzo de la Cuarta Gran Guerra Mundial Shinobi, y por extensión, la Invasión de Pain, Naruto había pensado con frecuencia que era su “deber” y “carga” para detener el dolor y el odio, y que debe asumir por sí solos. Sin embargo, señaló Itachi Uchiha a Naruto que esta línea de pensamiento, junto con su creciente poder, sólo lo haría arrogante. Incluso fue tan lejos como para sugerir que Naruto algún día podría llegar a ser como Madara en caso de que se olvide de sus amigos.
+Naruto demostrando su inquebrantable camino ninja
+Naruto demostrando su inquebrantable camino ninja
+
+Después de exponer la identidad de Tobi como Obito Uchiha y expresar su desaprobación por su visión oscura de la vida, Naruto declara a Obito que no iba a dejar que matara a ninguno de sus compañeros y amigos. Como resultado, Obito resolvió poner al "elegido" y a la Alianza en la misma desesperación que experimentó, es decir, matando a uno de los amigos de Naruto, Neji Hyūga. Esto, junto con la "realidad" de Obito y sus creencias, llevó al joven shinobi a un periodo de confusión mental. Poco después, Naruto le dice a Kakashi y a sus compañeros que entiende claramente que un shinobi verdadero está destinado a perdurar, creyendo que si recordar a sus amigos caídos era una maldición, con mucho gusto asumiría esa carga para siempre. Esto muestra que la voluntad de Naruto sigue sobrepasando lo imposible, y que a diferencia de Obito, quiere mantener los lazos que hizo con sus amigos. Después del salto temporal, se ve que Naruto ha desarrollado una fuerte madurez en su personalidad siendo ahora mucho más responsable por el cargo que posee ahora y se desconoce de momento si conserva algunos rasgos de su personalidad infantil e incluso se volvió lo suficientemente objetivo como para descalificar a su hijo por cometer trampa en los Exámenes Chūnin.
+
+Aunque finalmente logró su sueño de convertirse en Hokage, sus responsabilidad a menudo abrumaría a Naruto, privándolo de pasar tiempo con su familia.[16] Admite que parte de esto proviene de no haber crecido con un padre, lo que lo hace inseguro de cómo interactuar adecuadamente con sus hijos. Sin embargo, Naruto se las apaña creando clones de sombra para atenderlos mientras está ocupado, los protege del peligro, pasa tiempo con ellos cuando puede y expresa orgullo por los éxitos de sus hijos.
+
+Él adoptó la filosofía de Hiruzen Sarutobi que todos de la aldea son su familia, creyendo que las relaciones genuinas están formadas por el amor en lugar de las relaciones de sangre biológica.[17]
+
+Naruto Oscuro
+Naruto Oscuro Anime
+Naruto Oscuro.
+
+Después de que Killer B se negara a entrenarlo, Motoi guía a Naruto y Yamato a las Cataratas de la Verdad, el lugar donde B entrenó para controlar al Ocho Colas. Dio instrucciones a Naruto de sentarse en una plataforma y cerrar los ojos. Poco después, Naruto Oscuro (ナルト 闇, Yami Naruto) apareció. Mencionó que él era la manifestación de la oscuridad que existía en él: su odio, maldad y desprecio a toda Konohagakure. Naruto Oscuro afirmó que él era el Naruto real y que Naruto era un impostor. Como resultado, ambos empezaron a pelear, pero Naruto se dio cuenta de que tenían las mismas técnicas y habilidades. Como resultado, su lucha terminó en empate y Naruto le dijo lo que pasó a Yamato y Motoi. Motoi dijo que era necesario derrotar al Naruto Oscuro para controlar al Nueve Colas. Apareció de nuevo después de que Naruto regresara a las Cataratas de la Verdad. Cuando Naruto proyecta una imagen de su mente (su firma de autógrafos que no pudo dar a los shinobi de Konohagakure), Naruto Oscuro enfureció, le recordó a Naruto sobre la forma en que sufrió a causa de los habitantes de la aldea y dijo que él no debería confiar en ellos. Sin embargo, Naruto dijo que tenía que tener fe en sí mismo, lo que hace debilitarse Naruto Oscuro, y cuestionarse sobre la razón de su existencia. Naruto afirmó que era realmente él y le dio las gracias por todo, abrazándolo cuando trató de atacarlo y asegurandole que todo iba a estar bien, Naruto Oscuro desapareció.
+
+Creación y concepción
+Diseño inicial de Naruto
+Diseño inicial de Naruto.
+
+Cuando se creó el personaje de Naruto Uzumaki, Masashi Kishimoto incorporó una serie de rasgos que sentía que lo hacían un héroe ideal y noble: una forma sencilla de pensar un poco travieso y con el talento que posee el protagonista de la franquicia de Dragon Ball, Son Gokū. Asimismo, se aseguró que Naruto fuera un personaje «simple y estúpido». Sin embargo, Kishimoto también añadió un pasado oscuro para hacerlo un personaje ideal. El diseño inicial de Naruto fue modificado varias veces por Kishimoto, siempre con ropa diferente para hacerlo más llamativo para las audiencias occidentales, además de ser más fácil de dibujar.
+El vestuario de Naruto se basa en la ropa que utilizaba el mismo Kishimoto cuando era joven; el color naranja de sus prendas se debe a que Kishimoto determinó que era el más adecuado para combinarlo con el color azul. Debido a que el personaje frecuentemente estaba relacionado con espirales, ciertos patrones de líneas curvas fueron introducidos en su vestimenta. En las ilustraciones iniciales Naruto fue dibujado con botas, pero Kishimoto decidió sustituirlas por las sandalias habituales de los ninjas de la serie porque comentó que le gusta dibujar los dedos de los pies. El creador aseguró sentirse contento de que su personaje tuviera el pelo rubio y ojos azules. Cuando se le preguntó por qué la comida favorita de Naruto es el ramen en lugar del udon, Kishimoto dijo que se debe a que a él le gusta comer ese platillo.
+
+En el diseño de su apariencia en la segunda parte, Kishimoto señaló que amplió el protector de la frente de Naruto para hacer las cejas más fáciles de dibujar, algo que le había molestado en su diseño anterior. También agregó que los pantalones de Naruto le daban una apariencia infantil y para remediar esto, Kishimoto diseñó una parte de los pantalones enrollados, dándole al personaje un aspecto mucho más maduro.
+
+Curiosidades
+Naruto no sabía desde un principio que Minato era su padre, al reírse de forma feliz cuando él se lo cuenta.
+En el capítulo manga 3, Naruto recién levantado y despeinado, posee el mismo peinado que Son Gokū, de Dragon Ball. Mostrando referencias a la serie de Akira Toriyama, ya desde el principio.
+Naruto con el cabello igual al de Goku
+Naruto con el cabello igual al de Goku.
+
+Naruto ha sido besado o besó en los labios diez veces, (Naruto besó accidentalmente a Sasuke 2 veces, la primera al comienzo de la serie, la segunda en una saga de relleno; Isaribi le dio respiración de boca a boca al igual que Sakura; Fūka lo besó 3 veces para tratar de obtener su alma; Ryūzetsu por salvarle la vida en Naruto Shippūden 5: Prisión de Sangre ; y finalmente sus últimos dos besos fueron con Hinata Hyuga, al final de la película El Último: Naruto la Película, uno al final de la película y el otro en los créditos).
+En la versión original, Naruto suele acabar sus frases con la construcción -ttebayo. Esta partícula la añade al final de las formas verbales, siendo la más común Dattebayo, estando aquí unida a una forma vulgar del verbo desu, que significa ser. Otra muy corriente en la serie es Wakattebayo, con el verbo comprender. La terminación no significa nada en sí, es una peculiaridad del idioma japonés, que tiene dialectos y costumbres muy variadas y diversas, como esta y otra muchas. Algunas son características de determinadas zonas. tteba se utiliza al repetir las cosas y yo es énfasis, la traducción literal seria "Te digo".
+En la edición de España se tradujo como "Vaya que sí".
+En México se tradujo como "De veras".
+En Estados Unidos de América se tradujo como "Believe it", es decir: "Créelo".
+Naruto, es un ingrediente del Ramen, es una especie de pasta de pescado. Una forma muy común de prepararlo es haciendo una especie de "royitos" con esta pasta. Lo que en Japón conocen como Narutomaki, se parece de cierta forma al nombre del protagonista Naruto Uzumaki. En las manga de Shonen Jump, es normal que se nombren algunos personajes de forma que suene parecido a un alimento o un animal. Su nombre es el del protagonista del libro de Jiraiya: La historia de Naruto y curiosamente a éste se le ocurrió este nombre cuando comía Ramen. Se dice que por éso a Naruto le encanta el Ramen. Básicamente el nombre Naruto Uzumaki es un juego de palabras de Naruto-maki que es el ingrediente del Ramen y Uzu que hace referencia a la forma de dicho ingrediente la cual es un remolino.
+Naruto es el más joven del equipo Kakashi y el segundo mas joven de los 12 de Konoha, Hinata siendo la más joven.
+Naruto es el ninja que ha tenido más senseis en la serie: Iruka, Kakashi, Ebisu, Jiraiya, Yamato, Asuma, Fukasaku y Killer Bee (este último es de Kumogakure).
+El autor de One Piece, Eiichido Oda, declaró que el nombre de su personaje, Sanji iba a ser Naruto, sin embargo lo cambió debido a que el manga de Naruto estaba por salir y deseaba evitar confusiones.
+Naruto hizo una aparición de fondo en la portada del Capítulo 766 de One Piece, puesto que la persona detrás de Nami quien utiliza un vestido con el símbolo de Konoha se intuye es Naruto. Igualmente, cada protagonista come la comida favorita del otro, Monkey D. Luffy disfruta de un tazón de Ramen, mientras que Naruto come una pieza de carne.
+En el capítulo 700, la Jolly Roger de los Piratas de Sombrero de Paja aparece en el protector de frente de Naruto en la Roca Hokage.
+Según el Tercer Databook de Naruto
+Las aficiones favoritas de Naruto son las bromas, entrenar y la jardinería.
+Naruto desea traer a Sasuke de vuelta, y una cita con Sakura. También desea derrotar a los Akatsuki y ser Hokage.
+Los alimentos favoritos de Naruto son Ramen, (Específicamente el del Bar Ichiraku Ramen), el ramen instantáneo y el Oshiruko (sopa de judías rojas). Mientras que la menos favoritas son las verduras.
+La bebida favorita de Naruto es la leche y la menos favorita el alcohol y tragos, ya que nunca le gustaron por su modo de ser y los "tres tabúes que deterioran a un ninja: el alcohol, el dinero y las mujeres".
+Número de registro de Naruto es 012607.
+Naruto ha completado 17 misiones oficiales en total: 7 Rango D, 1 Rango C, 2 Rango B, 6 Rango A, 1 Rango S.
+Frases favoritas de Naruto son "Nunca te rindas","¿Se lo que estoy diciendo?" Dattebayo ("de veras" en latino) y "Jamás retrocederé a mi palabra, ese es mi camino ninja"
+Asociación de Sasuke y Naruto con Raijin y Fūjin
+Asociación de Sasuke y Naruto con Raijin y Fūjin
+
+Tanto Sasuke como Naruto son asociados con los dioses sintoístas Raijin de los truenos (el símbolo del Sharingan es el mismo que el de este dios) y Fūjin de los vientos respectivamente incluso la afinidad de la naturaleza de cada uno tiene que ver con el elemento en cuestión, rayo para el Uchiha y viento para el Uzumaki.
+En el Omake del Capítulo #27 Naruto: Shippūden, "Rivales por el amor" se le ve como presentador junto a Rock Lee, Hablando de lo popular, inteligente y gentil que se ha vuelto Sakura. Cada uno expresa la manera de como conseguirá su corazón. En este Omake, Naruto se burla de Lee por la manera de cómo empezó su relación con Sakura, alegando que él tenía más posibilidad por estar en su mismo equipo. Al final termina comicamente con la escena del beso entre Naruto y Sasuke
+Indirectamente siempre ha usado el símbolo de su clan en cada una de sus vestimentas, aún sin saberlo.
+A pesar de ser uno de los ninjas más poderoso de Konohagakure, en todo el transcurso de la parte II permanece como Genin, sin embargo, Naruto también es un sabio por lo que ha logrado superar a sus compañeros que solamente tienen nivel Chunin, y a los Jonin de Konoha, e incluso a los ANBU.
+Según el ending U Can Do It! Naruto domina casi todos los estilos de lucha.
+Hidan es el único miembro de Akatsuki que Naruto nunca conoció (a excepción de la saga de relleno Chikara).
+Aunque Naruto ha creado la técnica más poderosa del Elemento Viento (Elemento Viento: Rasen Shuriken), Sasuke controla la técnica más poderosa del Elemento Fuego (Amaterasu) y una de las más poderosas del Elemento Rayo (Kirin), por lo cual es casi imposible que Naruto pueda vencerlo usando esta técnica, ya que la debilidad del Viento es el Fuego.
+Naruto ha sido capaz de derrotar a un Akatsuki por sí solo en una batalla, cosa que sólo han logrado Might Guy (a Kisame), Shikamaru (a Hidan), Obito (a Konan) y Sasuke (a Deidara e Itachi).
+Naruto puede ejecutar jutsus prohibidos sin sufrir daños, como Jutsu: Clon de Sombra y Elemento Viento: Rasen Shuriken gracias a sus enormes cantidades de Chakra y sus habilidades del Senjutsu.
+A pesar de que el Ocho Colas le dijo a Naruto que si utilizaba sus clones de sombra cuando usaba la forma controlada del Kyūbi, el Kyūbi extraería el chakra de Naruto más rápido lo cual lo mataría, Naruto desobedece a eso y utiliza sus clones para enfrentar a los Zetsus blancos y luego dice que lo hará en los campos de batalla.
+En el OVA Naruto Shippuden 2011: Naruto x UT, Naruto está utilizando una Cuchilla de Chakra de Asuma.
+Naruto es el usuario de Rasengan que más variantes del jutsu ha creado.
+Hasta que no conoció a su madre él no entendía por qué Kiba y Shikamaru le tienen miedo a sus madres.
+Junto a sus padres Naruto posee sobrenombres dados por sus compañeros de la aldea. Su padre era conocido como “El Relámpago Amarillo de Konoha” y su madre “Cabeza de Tomate”, poco después “La Habanera Sangrienta” y Naruto “El hiperactivo ninja cabeza hueca” y según él mismo “El Hokage Naranja de Konoha”. Además esto es un juego de palabras, puesto que Minato era el amarillo y Kushina el rojo, a los cuales si se combinan se obtiene el Naranja, el cual es Naruto.
+No le hubiera importado tener el cabello del mismo color que el de su madre e incluso se imaginó con el cabello rojo característico del clan Uzumaki.
+En el manga, Naruto le dice a Hinata que ella lo ha salvado dos veces, esto es un error, en el manga, Hinata salva a Naruto solo una vez, aunque la primera vez se podría referir a los Exámenes Chūnin antes del enfrentamiento con Neji en el que Hinata le dio ánimos a Naruto.
+Al entrar en Modo Control de Kurama su olor cambia ya que Kiba no fue capaz de reconocerlo por su olor.
+En el Manga #573, Tobi mira fijamente la sonrisa de Naruto luego se lo imagina a él y detrás suyo con 9 magatamas iguales a la del Sabio de los Seis Caminos.
+En el Episodio #188 de Naruto, Naruto le pide a Shun que use nombres de comidas para explicarle su estrategia. Algo parecido hizo Goku en Dragon Ball cuando tuvo que coordinar ataques con Trunks y Piccolo.
+En una entrevista hecha a Kishimoto, le preguntaron: Si pudiera ser uno de los personajes de Naruto, ¿Cuál sería? a lo que él responde: Naruto, ya que si pudiera dividirse en 17 personas con el Jutsu Multiclones de sombras, el sería capaz de dibujar mucho mejor el manga de la serie y terminar el capítulo de la serie por hacer solo una página.
+Cuando Naruto lucho contra Kurama absorbió un poco de chakra del Ocho Colas.
+Konan lo reconoce como el "Puente a la paz".
+Es tan poderoso que logró vencer a Shukaku con solo 12 años y luego con 16 ha conseguido vencer a todos los demás bijus menos al Hachibi.
+Ha absorbido Chakra de casi todas las Bestias con Cola menos del Shukaku
+En una escena de la Cuarta Guerra, el Diez Colas ve a Rikudō Sennin en Naruto, mucho antes de que este se presentase ante Naruto y Sasuke.
+Naruto junto con Killer B son los únicos jinchūrikis de los cuales se conoce su clan, siendo Naruto del Clan Uzumaki y Killer Bee del Clan Yotsuki.
+En el videojuego Naruto Shippūden: Ultimate Ninja Storm 3, Naruto puede ser visto vistiendo un traje igual al de Goku de la serie Dragon Ball y realizando un ataque basado en el KameHameHa.
+En Road to Ninja: Naruto the Movie, Kushina y Minato lo nombran Menma, pero esto lo hacen porque lo confunden con el verdadero. De hecho, el Menma también es un ingrediente opcional del ramen, al igual que el Naruto.
+Durante su enfrentamiento con Nagato en la cuarta guerra mundial shinobi, no reconoce de forma directa las habilidades del Camino Asura ni del Camino Humano, puesto que no enfrentó a tales caminos de Pain en combates largos (al camino Asura lo derrotó con un Rasengan de forma inmediata y el Camino Humano fue alcanzado por el Rasen Shuriken sin posibilidad de escape).
+En el videojuego Naruto Shippuden: Ultimate Ninja Storm 3 Naruto pelea contra su parte Oscura.
+Según una encuesta realizada por la Shonen Jump, Naruto y Hinata se encuentran en el quinto lugar entre las mejores parejas de la historia de la revista.
+En el episodio 4 de la temporada 26 de Los Simpsons titulado "La Casita del Terror XXV" se puede ver como la familia Simpson interpreta a distintos personajes del Anime/Manga. En el caso de Bart, el toma el papel de Naruto.
+Naruto realiza un cameo junto a Goku, el protagonista de Dragon Ball en una historieta de DC comics titulada "Super Sons". Ambos aparecen en forma de posters.[18]
+Exceptuando a los Zetsus, Naruto ha matado canónicamente sólo a una persona, Yūra.
+En el aniversario número 50 de la Shōnen Jump, Japón voto por los personajes más poderosos de la revista, Naruto Uzumaki se quedó en el puesto 10 del Top 20.
+           </TEXTAREA>
+        </FORM>
+<div>
+        {% for inf in Informarciones_list %}
+         <img class="imag" src="{{inf.imagen.url}}" alt="">           
+         <div id="nombre"><a href="">"{{inf.Nombre}} {{inf.Apellido}}"</a></div>
+        {% endfor %}
+</div>
+    
+<footer>
+              <a href="https://www.crunchyroll.com/es/naruto"><img class="icono" src="{% static 'img/iconocrun.png' %}" alt=""></a>
+              <a href="https://www.youtube.com/watch?v=ZBTi5DapJ-w"><img class="icono" src="{% static 'img/iconoyoutube.png' %}" alt=""></a>
+              <a href="https://es-la.facebook.com/BorutoyNaruto/videos/naruto-capitulo-1/277191479317210/"><img class="icono" src="{% static 'img/iconoface.png' %}" alt=""></a>                                  
+
+</footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  {% endblock %}  
+</body>
+</html> 

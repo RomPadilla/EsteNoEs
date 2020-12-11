@@ -1,0 +1,60 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body{
+     background-color: orange;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+li{
+  float: left;
+  list-style: none;
+  margin-top: 1vw;
+  margin-right: -3vw;
+  background: white;
+}
+
+nav{
+
+  float: right;
+  margin-top: 0vw;
+  margin-right: 3vw;
+}
+
+a.menu{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  margin-right: 4vw
+}
+
+@font-face{
+  font-family: 'rock';
+  src: url(../Fuentes/QueenInlineGrunge.ttf);
+}
+
+.container{
+  background-color:purple;
+}
+
+.jumbotron text-center{
+  background-color:orange;
+}
+
+.album py-5 bg-light{
+ background-color:orange;
+}
+
+main{
+	background-color:orange;
+}
+
+.sub{
+ color:white;
+
+}

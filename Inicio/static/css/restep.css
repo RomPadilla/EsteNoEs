@@ -1,0 +1,38 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body{
+    
+    background-color: orange;
+}
+
+
+@font-face{
+  font-family: 'fuente';
+  src: url(../Fuentes/minster1.ttf);
+}
+
+@font-face{
+  font-family: 'rock';
+  src: url(../Fuentes/QueenInlineGrunge.ttf);
+}
+
+p{
+  text-decoration: none;
+  font-family: 'rock';
+  font-size: 2vw;
+  margin-right: 4vw;
+  color: white;
+}
+
+#volver{
+  text-decoration: none;
+  font-family: 'fuente';
+  font-size: 2vw;
+  margin-right: 4vw;
+  color: gold;
+  background-color: purple;
+}

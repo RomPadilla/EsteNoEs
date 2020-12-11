@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{% static 'css/registro.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}<title>Registro de usuario</title>{% endblock %}
+</head>
+    <header>
+    {% block content %}            
+      <img class="logo" src="{% static 'img/Name.png' %}" alt="name">
+      <br></br>
+      <br></br>
+      <br></br>
+        <nav>
+            <ul>
+                <li><a class="menu" href="{% url 'Inicio' %}">Inicio</a></li>
+                <li><a class="menu" href="{% url 'Naruto' %}">Personajes</a></li>
+                <li><a class="menu" href="{% url 'ListaPersonajes' %}">Galeria</a></li>
+                {% if user.is_authenticated %}
+                {% if perms.Naruto.delete_informaciones %}
+                <li><a class="menu" href="{% url 'admin:index' %}">Administrar</a></li>
+                {% endif %}                
+                <li><a class="menu" href="{% url 'User' %}">{{ user.username }}</a></li>
+                <li><a class="menu" href="{% url 'logout' %}">Cerrar Sesión</a></li>
+                {% else %}
+                <li><a class="menu" href="{% url 'register' %}">Registro</a></li>
+                <li><a class="menu" href="{% url 'login' %}">login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <br></br>
+        {% if form.errors %}
+        <p>Error al registrar/crear usuario, porfavor intentelo de nuevo, mas abajo se detalla en que se equivoco</p>
+        {% endif %}
+        <br></br>
+        <h1>Bienvenido</h1><p>Gracias por querer ser miembro de nuestra Pagina C:</p>
+        <br></br>
+        {% endblock %}
+    </header>
+<body>
+    
+        <form method="POST" action="">
+                {% csrf_token %}
+            <table>
+               {{form.as_table}}
+            </table>
+            <input type="reset" value="Limpiar" id="boton">
+            <button type="submit" class="success" id="boton">Registrarse</button>
+        </form>
+        <br></br>
+        {{form.errors}}
+</body>
+</html>
+

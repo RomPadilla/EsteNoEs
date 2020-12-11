@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    
+  	{% block title %}<title >User</title>{% endblock %}
+  	<link rel="stylesheet" href="{% static 'css/User.css' %}">
+
+	</head>
+
+<body>
+	{% block content %}
+	<header>
+        <nav>
+            <ul class="BarraMenu">
+                <li><a class="menu" href="{% url 'Inicio' %}">Inicio</a></li>
+                <li><a class="menu" href="{% url 'Naruto' %}">Personajes</a></li>
+                <li><a class="menu" href="{% url 'ListaPersonajes' %}">Galeria</a></li>
+                {% if user.is_authenticated %}
+                <li id="con"><a class="menu" href="{% url 'User' %}">{{ user.username }}</a></li>
+                <li id="out"><a class="menu" href="{% url 'logout' %}">Cerrar Sesión</a></li>
+                {% if perms.Naruto.delete_informaciones %}
+                <li id="us"><a class="menu" href="{% url 'admin:index' %}">Administrar</a></li>
+                {% endif %}
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+<div id="main">
+
+<ul id="navigationMenu">
+
+    
+    <li>
+    	<a class="Info" href="#" onclick="VerCuenta()">
+            <span>Información Personal</span>
+        </a>
+    </li>
+    
+    <li>
+	     <a class="Editar" href="#" onclick="ModificarUser()">
+            <span>Editar Cuenta</span>
+         </a>
+    </li>
+    
+    <li>
+    	<a class="Eliminar" href="#">
+
+            <span>Eliminar Cuenta</span>
+        </a>
+    }
+    </li>
+    
+    <li>
+    	<a class="contactanos" href="mailto:rom.padilla@alumnos.duoc.cl?Subject=Problemas%20con%20la%20cuenta">
+            <span>¿Tienes problemas con tu cuenta? Contactanos</span>
+        </a>
+    </li>
+</ul>
+    
+</div>
+
+<div id="CuentaU">
+
+<h2>Informacion Cuenta</h2>
+
+<h1> Usuario: {{user.username}}</h1>
+<p>Nombre: {{user.first_name}} {{user.last_name}}</p>
+<p>Correo: {{user.email}}</p>
+</div>
+
+<div id="Modificar">
+  <h2>Modificar Cuenta</h2>
+  <br>
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h1> Usuario: {{user.username}}</h1>
+    <p>Nombre: {{user.first_name}} {{user.last_name}}</p>
+    <p>Correo: {{user.email}}</p>
+    <div class="d-flex justify-content-end">
+      <input type="reset" value="Cancelar" class="btn btn-secondary">
+      &nbsp;
+      <input type="submit" value="Editar" class="btn btn-primary">
+    </div>
+  </form>
+  {{mensaje}}
+</div>
+    	
+<div class="container">
+   <div class="Reproductor">
+
+    <h5 class="Reproductor__Titulo">Music</h5>
+
+     <div class="Reproductor__album">
+       <img src="" id="album" class="Reproductor__img"/>
+     </div>
+
+     <h2 class="Reproductor__Autor" id="autor"></h2>
+     <h3 class="Reproductor__Cancion" id="tituloS"></h3>
+
+        <div class="tiempo">
+          00:00 & 00:00
+        </div>
+
+        <div class="barra_larga">
+          <div class="barra"></div>
+        </div>
+
+    <div class="Reproductor__controles1"> 
+       <div class="Reproductor__btn Reproductor__btn--mediano pink" id="Anterior"> 
+        <a href="#" onclick="prevAudio()"><i class="fa fa-fast-backward"></i></a>
+       </div>
+
+       <div class="Reproductor__btn Reproductor__btn--mediano orange play" id="play">
+        <a href="#" class="play-pausa" onclick="togglePlayPause()">
+        	<i class="fa fa-play"></i></a>
+       </div>
+
+       <div class="Reproductor__btn Reproductor__btn--mediano pink" id="Siguiente">
+        <a href="#" onclick="nextAudio()"><i class="fa fa-fast-forward"></i></a>
+       </div>
+    </div>
+      <div class="Reproductor__controles2">
+
+      	<div class="Reproductor__btn Reproductor__btn--mediano pink" id="menosv">
+            <a href="#" onclick="menosVolumen()"><i class="fa fa-minus"></i></a>
+        </div>
+
+      	<div class="Reproductor__btn Reproductor__btn--mediano pink" id="vocina">
+            <a href="#" class="volumenOn"><i class="fa fa-volume-up"></i></a>
+        </div>
+
+      	<div class="Reproductor__btn Reproductor__btn--mediano pink" id="masv">
+            <a href="#" onclick="masVolumen()"><i class="fa fa-plus"></i></a>
+        </div>
+
+      </div>
+    </div>
+ </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/user.js' %}"></script>
+    {% endblock %}
+  </body>
+</html>

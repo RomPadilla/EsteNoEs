@@ -1,0 +1,83 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body{
+    
+    background-color: orange;
+}
+
+
+li{
+  float: left;
+  list-style: none;
+  margin-top: 1vw;
+  margin-right: -3vw;
+  background: white;
+}
+
+nav{
+
+  float: right;
+  margin-top: 0vw;
+  margin-right: 3vw;
+}
+
+a.menu{
+  text-decoration: none;
+  font-family: 'rock';
+  color: black;
+  font-size: 1.5vw;
+  margin-right: 4vw
+}
+
+@font-face{
+  font-family: 'rock';
+  src: url(../Fuentes/QueenInlineGrunge.ttf);
+}
+
+@font-face{
+  font-family: 'fuente';
+  src: url(../Fuentes/minster1.ttf);
+}
+
+#id_username{
+  text-decoration: none;
+  font-family: 'rock';
+  font-size: 3vw;
+  margin-right: 4vw;
+}
+
+label{
+  text-decoration: none;
+  font-family: 'fuente';
+  font-size: 4vw;
+  margin-right: 4vw;
+}
+
+#id_password{
+  text-decoration: none;
+  font-family: 'rock';
+  font-size: 3vw;
+  margin-right: 4vw;
+}
+
+#loginbtn{
+  text-decoration: none;
+  font-family: 'rock';
+  font-size: 3vw;
+  margin-right: 4vw;
+  color: gold;
+  background-color: purple;
+}
+
+#lostp{
+  text-decoration: none;
+  font-family: 'rock';
+  font-size: 3vw;
+  margin-right: 4vw;
+  color: gold;
+  background-color: purple;
+}
