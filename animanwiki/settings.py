@@ -26,7 +26,7 @@ SECRET_KEY = 'rvt(zh5c9cgfqe_w*@3$sm-0@#14z#c2kd*bfqp_z59oy_t&qq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['animanwiki.pythonanywhere.com']
 
 LOGIN_REDIRECT_URL = '/User'
 LOGOUT_REDIRECT_URL = '/'
